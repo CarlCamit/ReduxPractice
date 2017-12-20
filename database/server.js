@@ -1,9 +1,16 @@
 const express = require('express')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const server = express()
 
-server.use(bodyParser.json()) //Allows json uploads
+server.use(cors())
+server.use(bodyParser.json()) // Allows json uploads
+
+server.use('/', [
+  require('./routes/todolist')
+])
+
 
 server.listen(7000, (error) => {
   if (error) {
