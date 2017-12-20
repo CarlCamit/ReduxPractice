@@ -10,6 +10,9 @@
     "nodemon": "^1.13.3"
   },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "drop": "node models/drop.js",
+    "seed": "node models/seeds.js",
+    "reset": "npm run drop && npm run seed" // npm is used as production typically doesn't have yarn
   }
 }
