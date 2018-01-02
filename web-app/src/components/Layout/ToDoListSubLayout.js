@@ -2,7 +2,6 @@ import React from "react"
 
 export const ToDoListSubLayout = (props) => {
     return (
-        console.log(props),
         <div className="todolist-sub-layout">
             <p>To Do List Layout</p>
             { props.todolist.map((todo) => (
